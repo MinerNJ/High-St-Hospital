@@ -4,8 +4,8 @@ public class VampireJanitor extends Janitor {
 	
 	boolean isDrinkingBlood;
 
-	public VampireJanitor(String Name, int i, boolean isSweeping, boolean isDrinkingBlood) {
-		super(Name, i, isSweeping);
+	public VampireJanitor(String Name, String IDNum, boolean isSweeping, boolean isDrinkingBlood) {
+		super(Name, IDNum, isSweeping);
 		isDrinkingBlood = !isDrinkingBlood;
 		}
 

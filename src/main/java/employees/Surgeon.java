@@ -4,8 +4,8 @@ public class Surgeon extends Doctor {
 
 	private boolean Operation;
 	
-	public Surgeon(String Name, int i, String Specialty, boolean Operating) {
-		super(Name, i, Specialty);
+	public Surgeon(String Name, String IDNum, String Specialty, boolean Operating) {
+		super(Name, IDNum, Specialty);
 		Operating = !Operating;
 		
 	}

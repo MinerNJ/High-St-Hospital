@@ -4,8 +4,8 @@ public class Janitor extends Employee {
 
 	private boolean isSweeping;
 	
-	public Janitor(String Name, int i, boolean isSweeping) {
-		super(Name, i);
+	public Janitor(String Name, String IDNum, boolean isSweeping) {
+		super(Name, IDNum);
 		isSweeping = !isSweeping;
 	}
 

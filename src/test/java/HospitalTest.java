@@ -4,6 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import employees.Employee;
+import employees.Hospital;
+import employees.Nurse;
+import employees.Patient;
 
 public class HospitalTest {
 
@@ -27,7 +30,7 @@ public class HospitalTest {
 	public void shouldBeAbleToAddEmployee() {
 		// Arrange
 		Hospital testHospital = new Hospital();
-		Employee testEmployee = new Employee(null, 1);
+		Employee testEmployee = new Nurse(null, 1);
 
 		// Act
 

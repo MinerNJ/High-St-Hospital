@@ -1,6 +1,7 @@
+package employees;
+import java.util.Collection;
 import java.util.HashMap;
 
-import employees.Employee;
 
 
 public class Hospital {
@@ -8,12 +9,12 @@ public class Hospital {
 		private HashMap<String, Employee> employees = new HashMap<String, Employee>();
 		private HashMap<String, Patient> patients = new HashMap<String, Patient>();
 		
-		public HashMap<String, Employee> getEmployees() {
-			return employees;
+		public Collection <Employee> getEmployees() {
+			return employees.values();
 		}
 
-		public HashMap<String, Patient> getPatients() {
-			return patients;
+		public Collection <Patient> getPatients() {
+			return patients.values();
 		}
 
 		public int getHospitalSize() {

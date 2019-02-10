@@ -2,6 +2,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import employees.Patient;
 import junit.framework.Assert;
 
 public class PatientTest {

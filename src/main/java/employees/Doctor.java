@@ -4,8 +4,8 @@ public class Doctor extends Employee {
 
 	private String Specialty;
 	
-	public Doctor(String Name, int i, String Specialty) {
-		super(Name, i);
+	public Doctor(String Name, String string, String Specialty) {
+		super(Name, string);
 		this.Specialty = Specialty;
 	}
 

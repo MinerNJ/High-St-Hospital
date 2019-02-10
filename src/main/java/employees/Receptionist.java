@@ -4,8 +4,8 @@ public class Receptionist extends Employee {
 
 	private boolean PhoneCall;
 	
-	public Receptionist(String Name, int i, boolean PhoneCall) {
-		super(Name, i);
+	public Receptionist(String Name, String IDNum, boolean PhoneCall) {
+		super(Name, IDNum);
 		PhoneCall = !PhoneCall;
 		}
 

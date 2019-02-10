@@ -5,9 +5,9 @@ public abstract class Employee {
 	private String Name;
 	private String IDNum;
 	
-	public Employee(String Name, int i) {
+	public Employee(String Name, String IDNum) {
 		this.Name = Name;
-		this.IDNum = Name;
+		this.IDNum = IDNum;
 	}
 
 	public String getName(){

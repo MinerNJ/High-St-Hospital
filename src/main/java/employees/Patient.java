@@ -1,3 +1,4 @@
+package employees;
 
 public class Patient {
 
@@ -8,8 +9,9 @@ public class Patient {
 	private int CurrentBlood;
 	private int CurrentHealth;
 
-	public Patient(String Name, int IDNum){
+	public Patient(String Name, String IDNum){
 		this.Name = Name;
+		this.IDNum = IDNum;
 		this.CurrentBlood = DefaultBloodLevel;
 		this.CurrentHealth = DefaultHealthLevel;
 	}
@@ -29,6 +31,15 @@ public class Patient {
 	public String getIDNum() {
 		return IDNum;
 	}
+
+	public void reduceBlood() {
+		CurrentBlood -=2;
+	}
+
+	public int getCurrentBlood() {
+		return CurrentBlood;
+	}
+
 
 
 	
