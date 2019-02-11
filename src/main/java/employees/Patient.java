@@ -4,24 +4,23 @@ public class Patient {
 
 	private String Name;
 	private String IDNum;
-	private int DefaultBloodLevel = 20;
-	private int DefaultHealthLevel = 10;
-	private int CurrentBlood;
-	private int CurrentHealth;
+	private int BloodLevel;
+	private int HealthLevel;
+	
 
 	public Patient(String Name, String IDNum){
 		this.Name = Name;
 		this.IDNum = IDNum;
-		this.CurrentBlood = DefaultBloodLevel;
-		this.CurrentHealth = DefaultHealthLevel;
+		this.BloodLevel = 20;
+		this.HealthLevel = 10;
 	}
 	
 	public int getHEALTH_LEVEL() {
-		return DefaultHealthLevel;
+		return HealthLevel;
 	}
 
 	public int getBLOOD_LEVEL() {
-		return DefaultBloodLevel;
+		return BloodLevel;
 	}
 
 	public String getName() {
@@ -32,12 +31,24 @@ public class Patient {
 		return IDNum;
 	}
 
+	public int getCurrentBlood() {
+		return BloodLevel;
+	}
+	
 	public void reduceBlood() {
-		CurrentBlood -=2;
+		BloodLevel -=2;
 	}
 
-	public int getCurrentBlood() {
-		return CurrentBlood;
+	public void drainBlood() {
+		BloodLevel -=5;
+	}
+
+	public void restoreHealth() {
+		HealthLevel +=1; 
+	}
+
+	public void recoverHealth() {
+		HealthLevel +=2;
 	}
 
 

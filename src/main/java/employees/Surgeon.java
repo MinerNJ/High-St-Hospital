@@ -16,7 +16,7 @@ public class Surgeon extends Doctor {
 	
 	@Override
 	public String calculatePay() {
-		return "$120,000";
+		return "Salary: $120,000";
 	}
 
 }

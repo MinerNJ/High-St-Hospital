@@ -4,35 +4,36 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 import employees.Doctor;
+import employees.Patient;
 
 public class DoctorTest {
 	
+	Doctor newDoctor = new Doctor("Al", null, "ENT");
+	Patient newPatient = new Patient(null, null);
+
 	@Test
 	public void shouldCheckSpecialty() {
-		
-		Doctor newDoctor = new Doctor("Al", 123, "ENT");
-		
 		String actual = newDoctor.getSpecialty();
-		
 		assertEquals("ENT", actual);
 	}
 
 	@Test
 	public void shouldCalculatePay() {
-		
-		Doctor newEmployee = new Doctor("Al", 123, null);
-		
-		String actual = newEmployee.calculatePay();
-		
+		String actual = newDoctor.calculatePay();
 		assertEquals("$90,000", actual);
 	}
 	
 	@Test
 	public void shouldHaveName() {
-		Doctor newDoctor = new Doctor("Al", 0, null);
-		
 		String actual = newDoctor.getName();
-		
 		assertEquals("Al", actual);
+	}
+	
+	@Test
+	public void shouldRecoverHealth() {
+		int beforeRecover = newPatient.getHEALTH_LEVEL();
+		newPatient.recoverHealth();
+		int afterRecover = newPatient.getHEALTH_LEVEL();
+		assertEquals(beforeRecover + 2, afterRecover);
 	}
 }
