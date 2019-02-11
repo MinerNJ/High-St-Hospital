@@ -19,10 +19,8 @@ public class VampireJanitor extends Janitor implements BloodWork{
 	}
 
 	@Override
-	public void drawBlood(Patient patient) {
-		if(isDrinkingBlood = true) {
-			patient.drainBlood();
-		}
+	public String toString() {
+		return getName() + " " + getIDNum() + " ";
+		
 	}
-
 }

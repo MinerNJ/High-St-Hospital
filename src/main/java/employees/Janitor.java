@@ -17,5 +17,11 @@ public class Janitor extends Employee {
 	public String calculatePay() {
 		return "Salary: $40,000";
 	}
+	
+	@Override
+	public String toString() {
+		return getName() + " " + getIDNum() + " ";
+		
+	}
 
 }

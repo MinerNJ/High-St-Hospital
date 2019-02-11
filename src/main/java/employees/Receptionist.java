@@ -17,4 +17,10 @@ public class Receptionist extends Employee {
 	public String calculatePay() {
 		return "Salary: $45,000";
 	}
+	
+	@Override
+	public String toString() {
+		return getName() + " " + getIDNum() + " ";
+		
+	}
 }

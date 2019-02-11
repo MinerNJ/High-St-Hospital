@@ -36,4 +36,9 @@ public class DoctorTest {
 		int afterRecover = newPatient.getHEALTH_LEVEL();
 		assertEquals(beforeRecover + 2, afterRecover);
 	}
+	
+	@Test
+	public void shouldReturnToString() {
+		
+	}
 }

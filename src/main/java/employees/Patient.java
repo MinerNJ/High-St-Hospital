@@ -52,6 +52,10 @@ public class Patient implements BloodWork {
 			BloodLevel -=1;
 		}
 	}
+
+	public void drainBlood() {
+		BloodLevel -=5;
+	}
 	
 }
 

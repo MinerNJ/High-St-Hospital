@@ -65,7 +65,7 @@ public class Application {
 
 			case "1":
 				System.out.println("The following staff are currently on call:");
-				System.out.println(hospital.getEmployees().values().toString());
+				System.out.println(hospital.getEmployees().values());
 				break;
 
 			case "2":

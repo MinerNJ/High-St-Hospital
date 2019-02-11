@@ -23,4 +23,15 @@ public class Doctor extends Employee implements CareForPatient {
 		patient.recoverHealth();
 	}
 
+	@Override
+	public void BloodSample(Patient patient) {
+		patient.drawBlood();
+	}
+
+	@Override
+	public String toString() {
+		return getName() + " " + getIDNum() + " ";
+		
+	}
+
 }

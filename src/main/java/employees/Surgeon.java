@@ -18,5 +18,11 @@ public class Surgeon extends Doctor {
 	public String calculatePay() {
 		return "Salary: $120,000";
 	}
+	
+	@Override
+	public String toString() {
+		return getName() + " " + getIDNum() + " ";
+		
+	}
 
 }

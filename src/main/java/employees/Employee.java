@@ -19,6 +19,8 @@ public abstract class Employee {
 	}
 	
 	public abstract String calculatePay();
+	
+	public abstract String toString();
 
 	
 
