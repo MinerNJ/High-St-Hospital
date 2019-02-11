@@ -1,6 +1,6 @@
 package employees;
 
-public class Doctor extends Employee {
+public class Doctor extends Employee implements CareForPatient {
 
 	private String Specialty;
 	
@@ -15,7 +15,12 @@ public class Doctor extends Employee {
 	
 	@Override
 	public String calculatePay() {
-		return "$90,000";
+		return "Salary: $90,000";
+	}
+
+	@Override
+	public void careForPatient(Patient patient) {
+		patient.recoverHealth();
 	}
 
 }

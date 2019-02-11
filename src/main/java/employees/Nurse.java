@@ -3,7 +3,7 @@ package employees;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class Nurse extends Employee implements DrawBlood{
+public class Nurse extends Employee implements CareForPatient{
 	
 	private ArrayList <Object> patientRoster = new ArrayList <Object>();
 
@@ -22,18 +22,17 @@ public class Nurse extends Employee implements DrawBlood{
 	
 	@Override
 	public String calculatePay() {
-		return "$50,000";
+		return "Salary: $50,000";
 	}
 
 	@Override
-	public void drawBlood(Patient patient) {
-		patient.reduceBlood();
+	public void careForPatient(Patient patient) {
+		patient.restoreHealth();
 	}
 
-//	public void drawBlood() {
-//		Collection<Patient> patients = getPatients().values();
-//		for (Patient patient : patients) {
-//			Patient.syringeWithdrawal();
-//		}
-//	}
+	@Override
+	public void BloodSample(Patient patient) {
+		 patient.drawBlood();
+	}
+
 }

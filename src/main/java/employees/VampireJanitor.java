@@ -1,6 +1,6 @@
 package employees;
 
-public class VampireJanitor extends Janitor {
+public class VampireJanitor extends Janitor implements BloodWork{
 	
 	boolean isDrinkingBlood;
 
@@ -15,7 +15,14 @@ public class VampireJanitor extends Janitor {
 	
 	@Override
 	public String calculatePay() {
-		return "Unlimited access to the Blood Bank";
+		return "Salary: Unlimited access to the Blood Bank";
+	}
+
+	@Override
+	public void drawBlood(Patient patient) {
+		if(isDrinkingBlood = true) {
+			patient.drainBlood();
+		}
 	}
 
 }
