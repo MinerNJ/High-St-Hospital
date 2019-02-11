@@ -46,6 +46,9 @@ public class Application {
 			
 			counter += 1;
 			hospital.dirtyHospital(counter);
+			for(Patient patient : hospital.getPatients().values()) {
+				patient.worsenWithTick(counter);
+			}
 			
 			System.out.println("What would you like to do?");
 			System.out.println("1. Check current employees.");
@@ -63,7 +66,6 @@ public class Application {
 			case "1":
 				System.out.println("The following staff are currently on call:");
 				System.out.println(hospital.getEmployees().values().toString());
-
 				break;
 
 			case "2":
@@ -96,7 +98,7 @@ public class Application {
 						break;
 
 					case "3":
-						System.out.println("Coming soon!");
+						System.out.println("Surgeons don't provide general care.");
 						break;
 
 					case "4":
@@ -112,6 +114,12 @@ public class Application {
 			case "4":
 				boolean SingleCareChoice = true;
 				while (SingleCareChoice) {
+					
+					counter += 1;
+					hospital.dirtyHospital(counter);
+					for(Patient patient : hospital.getPatients().values()) {
+						patient.worsenWithTick(counter);
+					}
 					
 					System.out.println("Please select the patient you would like to treat:");
 					System.out.println("1." + patient1.getName()); 

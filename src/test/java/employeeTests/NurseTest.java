@@ -20,7 +20,7 @@ public class NurseTest {
 	@Test
 	public void shouldCalculatePay() {
 		String actual = testNurse.calculatePay();
-		assertEquals("$50,000", actual);
+		assertEquals("Salary: $50,000", actual);
 	}
 	
 	@Test
@@ -35,7 +35,7 @@ public class NurseTest {
 	public void shouldDrawBlood() {
 		testNurse.addPatient(testPatient);
 		int beforeDraw = testPatient.getBLOOD_LEVEL();
-		testPatient.reduceBlood();
+		testPatient.drawBlood();
 		int afterDraw = testPatient.getBLOOD_LEVEL();
 		assertEquals(beforeDraw - 2, afterDraw);
 	}

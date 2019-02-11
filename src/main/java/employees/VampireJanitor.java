@@ -1,6 +1,6 @@
 package employees;
 
-public class VampireJanitor extends Janitor implements DrawBlood{
+public class VampireJanitor extends Janitor implements BloodWork{
 	
 	boolean isDrinkingBlood;
 

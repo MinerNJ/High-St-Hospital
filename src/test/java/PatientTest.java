@@ -7,42 +7,38 @@ import junit.framework.Assert;
 
 public class PatientTest {
 	
+	Patient newPatient = new Patient("Mark", null);
+
 	@Test
 	public void shouldNamePatient(){
-		Patient underTest = new Patient("Mark", 123);
-		
-		String actual = underTest.getName();
-		
+		String actual = newPatient.getName();
 		assertEquals("Mark", actual);
-		
 	}
 	
 	@Test
-	public void shouldHaveBlood(){
-		Patient underTest = new Patient("Mark", 123);
-		
-		int actual = underTest.getBLOOD_LEVEL();
-		
+	public void shouldHaveBlood(){		
+		int actual = newPatient.getBLOOD_LEVEL();
 		assertEquals(20, actual);
-		
 	}
 	
 	@Test
-	public void shouldhaveHealth(){
-		Patient underTest = new Patient("Mark", 123);
-		
-		int actual = underTest.getHEALTH_LEVEL();
-		
+	public void shouldhaveHealth(){		
+		int actual = newPatient.getHEALTH_LEVEL();
 		assertEquals(10, actual);
-		
 	}
 	
 	@Test
-	public void shouldHaveIDNum() {
-		Patient newPatient = new Patient(null, 123);
-		
-		String actual = newPatient.getIDNum();
-		
-		assertEquals(123, actual);
+	public void shouldHaveIDNum() {	
+		Patient specificTest = new Patient(null, "123");
+		String actual = specificTest.getIDNum();
+		assertEquals("123", actual);
+	}
+	
+	@Test
+	public void shouldWorsenWithTick() {
+		int beforeWorsen = newPatient.getBLOOD_LEVEL();
+		newPatient.worsenWithTick(5);
+		int actual = newPatient.getBLOOD_LEVEL();
+		assertEquals(beforeWorsen - 1, actual);
 	}
 }

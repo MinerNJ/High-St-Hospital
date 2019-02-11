@@ -1,6 +1,6 @@
 package employees;
 
-public class Patient {
+public class Patient implements BloodWork {
 
 	private String Name;
 	private String IDNum;
@@ -11,8 +11,8 @@ public class Patient {
 	public Patient(String Name, String IDNum){
 		this.Name = Name;
 		this.IDNum = IDNum;
-		this.BloodLevel = 20;
-		this.HealthLevel = 10;
+		this.BloodLevel = BLOOD_LEVEL;
+		this.HealthLevel = HEALTH_LEVEL;
 	}
 	
 	public int getHEALTH_LEVEL() {
@@ -34,14 +34,6 @@ public class Patient {
 	public int getCurrentBlood() {
 		return BloodLevel;
 	}
-	
-	public void reduceBlood() {
-		BloodLevel -=2;
-	}
-
-	public void drainBlood() {
-		BloodLevel -=5;
-	}
 
 	public void restoreHealth() {
 		HealthLevel +=1; 
@@ -51,10 +43,28 @@ public class Patient {
 		HealthLevel +=2;
 	}
 
+	public void drawBlood() {
+		BloodLevel -=2;
+	}
+
+	public void worsenWithTick(int counter) {
+		if(counter %5 == 0) {
+			BloodLevel -=1;
+		}
+	}
+	
+}
+
+	
+
+	
+
+	
+
 
 
 	
 
 
-}
+
 

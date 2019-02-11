@@ -48,17 +48,11 @@ public class Hospital implements CareForPatient{
 				patient.recoverHealth();
 			}
 		}
-		
-		
+	
 		public void doctorCareForPatient(Patient patient) {
 				patient.recoverHealth();
 		}
-
-		@Override
-		public void careForPatient(Patient patient) {
-			patient.restoreHealth();
-		}
-
+		
 		public void cleanHospital() {
 			cleanliness += 10;
 		}
@@ -66,6 +60,16 @@ public class Hospital implements CareForPatient{
 		public void dirtyHospital(int turnCount) {
 			if (turnCount % 5 == 0)
 				cleanliness -= 5;
+		}
+
+		@Override
+		public void careForPatient(Patient patient) {
+			patient.restoreHealth();
+		}
+
+		@Override
+		public void BloodSample(Patient patient) {
+			patient.drawBlood();
 		}
 	}
 	
